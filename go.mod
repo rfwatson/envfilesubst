@@ -3,7 +3,7 @@ module git.netflux.io/rob/envfilesubst
 go 1.18
 
 require (
-	github.com/hashicorp/go-envparse v0.0.0-20200406174449-d9cfd743a15e
+	github.com/hashicorp/go-envparse v0.1.0
 	github.com/stretchr/testify v1.7.1
 )
 

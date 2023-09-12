@@ -1,12 +1,13 @@
 ---
 kind: pipeline
-type: docker
+type: kubernetes
 name: default
 
 steps:
-- name: go-1.18
-  image: golang:1.18
+- name: build and test
+  image: golang:1.21
   commands:
+    - go env -w GOFLAGS="-buildvcs=false"
     - go install honnef.co/go/tools/cmd/staticcheck@latest
     - go build ./...
     - go vet ./...
